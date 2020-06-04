@@ -81,7 +81,7 @@ p {
   height: auto;
 }
 #header .header {
-  min-height: 8vh;
+  min-height: 7vh;
   background-color: rgba(31, 30, 30, 0.24);
   transition: 0.3s ease background-color;
 }
@@ -834,7 +834,7 @@ textarea::placeholder {
 
   /* Hero */
   #hero h1 {
-    font-size: 6rem;
+    font-size: 5rem;
   }
   /* End Hero */
 
