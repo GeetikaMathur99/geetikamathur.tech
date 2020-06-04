@@ -33,7 +33,7 @@ p {
   letter-spacing: 0.05rem;
 }
 .section-title {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 300;
   color: black;
   margin-bottom: 10px;
@@ -90,7 +90,7 @@ p {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
+  height: 80%;
   max-width: 1300px;
   padding: 0 10px;
 }
@@ -226,7 +226,7 @@ p {
 #hero h1 {
   display: block;
   width: fit-content;
-  font-size: 4rem;
+  font-size: 3rem;
   position: relative;
   color: transparent;
   animation: text_reveal 0.5s ease forwards;
@@ -829,12 +829,12 @@ textarea::placeholder {
     padding: 20px 60px;
   }
   h1.section-title {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   /* Hero */
   #hero h1 {
-    font-size: 7rem;
+    font-size: 6rem;
   }
   /* End Hero */
 
