@@ -314,8 +314,8 @@ p {
 }
 
 #highlights .highlights-img {
-  flex-basis: 40%;
-  height: 200px;
+  flex-basis: 43%;
+  height: 190px;
   overflow: hidden;
   position: relative;
   box-shadow: 0 0 12px #000;
