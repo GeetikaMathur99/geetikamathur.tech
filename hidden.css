@@ -674,7 +674,7 @@ p {
 input {
   padding: 10px;
   margin: 10px;
-  width: 100%;
+  width: 90%;
   background-color: rgba(136, 133, 133, 0.5);
   color: white;
   border: none;
@@ -687,7 +687,7 @@ input::placeholder {
 textarea {
   padding: 10px;
   margin: 10px;
-  width: 100%;
+  width: 90%;
   background-color: rgba(136, 133, 133, 0.5);
   color: white;
   border: none;
@@ -697,7 +697,7 @@ textarea::placeholder {
   color: #f1f1f1;
 }
 .submit {
-  width: 100%;
+  width: 90%;
   background: none;
   padding: 4px;
   outline: none;
