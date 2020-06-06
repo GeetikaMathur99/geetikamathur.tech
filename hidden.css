@@ -33,8 +33,8 @@ p {
   letter-spacing: 0.05rem;
 }
 .section-title {
-  font-size: 4rem;
-  font-weight: 300;
+  font-size: 3rem;
+  font-weight: 500;
   color: black;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -81,7 +81,7 @@ p {
   height: auto;
 }
 #header .header {
-  min-height: 8vh;
+  min-height: 7vh;
   background-color: rgba(31, 30, 30, 0.24);
   transition: 0.3s ease background-color;
 }
@@ -90,7 +90,7 @@ p {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
+  height: 80%;
   max-width: 1300px;
   padding: 0 10px;
 }
@@ -226,7 +226,7 @@ p {
 #hero h1 {
   display: block;
   width: fit-content;
-  font-size: 4rem;
+  font-size: 3rem;
   position: relative;
   color: transparent;
   animation: text_reveal 0.5s ease forwards;
@@ -314,7 +314,7 @@ p {
 }
 
 #highlights .highlights-img {
-  flex-basis: 40%;
+  flex-basis: 43%;
   height: 200px;
   overflow: hidden;
   position: relative;
@@ -545,6 +545,7 @@ p {
   font-size: 20px;
   text-align: center;
   font-weight: 1500;
+  padding-bottom: 20px;
 }
 
 #skills .html {
@@ -673,7 +674,7 @@ p {
 input {
   padding: 10px;
   margin: 10px;
-  width: 100%;
+  width: 90%;
   background-color: rgba(136, 133, 133, 0.5);
   color: white;
   border: none;
@@ -686,7 +687,7 @@ input::placeholder {
 textarea {
   padding: 10px;
   margin: 10px;
-  width: 100%;
+  width: 90%;
   background-color: rgba(136, 133, 133, 0.5);
   color: white;
   border: none;
@@ -696,7 +697,7 @@ textarea::placeholder {
   color: #f1f1f1;
 }
 .submit {
-  width: 100%;
+  width: 90%;
   background: none;
   padding: 4px;
   outline: none;
@@ -828,12 +829,12 @@ textarea::placeholder {
     padding: 20px 60px;
   }
   h1.section-title {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   /* Hero */
   #hero h1 {
-    font-size: 7rem;
+    font-size: 5rem;
   }
   /* End Hero */
 
