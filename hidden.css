@@ -594,13 +594,14 @@ p {
 }
 #about .col-right h2 {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 1000;
   letter-spacing: 0.2rem;
   margin-bottom: 10px;
 }
 #about .col-right p {
   margin-bottom: 20px;
   font-size: 1.5rem;
+  font-weight: 600;
 }
 #about .col-right .cta {
   color: black;
