@@ -34,7 +34,7 @@ p {
 }
 .section-title {
   font-size: 3rem;
-  font-weight: 500;
+  font-weight: 450;
   color: black;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -90,7 +90,7 @@ p {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 80%;
+  height: 70%;
   max-width: 1300px;
   padding: 0 10px;
 }
@@ -200,28 +200,29 @@ p {
 
 /* Hero Section */
 #hero {
-  background-image: url(images/love.jpeg);
-  background-size: cover;
-  background-position: top center;
+  background-color: black;
+  background-image: url(images/project/background.png);
+  background-repeat: no-repeat;
+  background-size: contain;          /* Smaller image */
+  background-position: right center; /* Align to right */
+  min-height: 100vh;                 /* Full screen height */
+  display: flex;
+  align-items: center;               /* Vertical center */
+  justify-content: flex-start;       /* Align text to left */
   position: relative;
   z-index: 1;
 }
 #hero::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.7;
-  z-index: -1;
+ display: none;
 }
 #hero .hero {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 0 50px;
-  justify-content: flex-start;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* Center the content vertically */
+  z-index: 2;
 }
 #hero h1 {
   display: block;
@@ -231,6 +232,7 @@ p {
   color: transparent;
   animation: text_reveal 0.5s ease forwards;
   animation-delay: 1ss;
+  z-index: 2;
 }
 #hero h1:nth-child(1) {
   animation-delay: 1s;
@@ -251,6 +253,7 @@ p {
   background-color: crimson;
   animation: text_reveal_box 1s ease;
   animation-delay: 0.5s;
+  z-index: 1;
 }
 #hero h1:nth-child(1) span {
   animation-delay: 0.5s;
@@ -264,24 +267,29 @@ p {
 
 /* End Hero Section */
 
-/* highlights Section */
-#highlights .highlights {
+/* certifications Section */
+#certifications .certifications {
   flex-direction: column;
   max-width: 2000px;
   margin: 0 auto;
   padding: 100px 0;
   background-color: #f1f1f1;
 }
-#highlights .highlights-header h1 {
+#certifications .certifications-header h1 {
   margin-bottom: 50px;
 }
-#highlights .all-highlights {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+#certifications .all-certifications {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 4px; /* spacing between items */
+  margin-top: 8px;
 }
-#highlights .highlights-item {
+@media screen and (max-width: 768px) {
+#certifications .all-certifications {
+    grid-template-columns: 1fr; /* 1 item per row on smaller screens */
+  }
+}
+#certifications .certifications-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -291,7 +299,7 @@ p {
   overflow: hidden;
   border-radius: 10px;
 }
-#highlights .highlights-info {
+#certifications .certifications-info {
   padding: 30px;
   flex-basis: 50%;
   height: 100%;
@@ -301,26 +309,26 @@ p {
   flex-direction: column;
   color: white;
 }
-#highlights .highlights-info h1 {
+#certifications .certifications-info h1 {
   font-size: 2rem;
-  font-weight: 650;
+  font-weight: 700;
   color: black;
 }
-#highlights .highlights-info h2 {
+#certifications .certifications-info h2 {
   font-size: 1.8rem;
   font-weight: 600;
   margin-top: 10px;
   color: maroon;
 }
 
-#highlights .highlights-img {
-  flex-basis: 43%;
-  height: 200px;
+#certifications .certifications-img {
+  flex-basis: 70%;
+  height: 300px;
   overflow: hidden;
   position: relative;
   box-shadow: 0 0 12px #000;
 }
-#highlights .highlights-img:after {
+#certifications .certifications-img:after {
   content: "";
   position: absolute;
   left: 0;
@@ -330,16 +338,123 @@ p {
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   opacity: 0.2;
 }
-#highlights .highlights-img img {
+#certifications .certifications-img img {
   transition: 0.3s ease transform;
 }
-#highlights .highlights-item:hover .highlights-img img {
-  transform: scale(1.1);
+#certifications .certifications-item:hover .certifications-img img {
+  transform: scale(1.5);
 }
-/* End highlights Section */
+/* End certifications Section */
+
+/* projects Section */
+#projects .projects {
+  flex-direction: column;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 100px 0;
+  background-color: #dde1e7;
+}
+#projects .projects-header h1 {
+  margin-bottom: 40px;
+}
+#projects .all-projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px; /* spacing between items */
+  margin-top: 8px;
+  padding: 0 20px;
+}
+
+#projects .projects-item {
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%;      /* Take full width of grid cell */
+  margin: 0;    
+}
+#projects .projects-info {
+  padding: 20px;
+  flex-basis: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+#projects .projects-info h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: black;
+}
+#projects .projects-info h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 10px;
+  color: maroon;
+}
+#projects .projects-info p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: black;
+}
+#projects .projects-info a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1d3557;
+  transition: color 0.3s ease;
+}
+#projects .projects-img {
+  flex-basis: 60%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 12px #000;
+}
+#projects .projects-img:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  opacity: 0.2;
+}
+#projects .projects-img img {
+  width: 100%;
+  height: auto;
+  max-height: 200px; /* Or a smaller value as needed */
+  object-fit: cover;
+  transition: 0.3s ease transform;
+}
+@media (max-width: 768px) {
+  .project-container {
+    display: grid;
+    grid-template-columns: 1fr; /* ✅ 1 project per row */
+    padding: 20px;
+  }
+
+  .project-box {
+    width: 100%; /* Make it full width */
+  }
+
+  .projects-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+/* End projects Section */
 
 /* blog section */
 #blog .blog {
+  display: flex;
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
@@ -348,32 +463,33 @@ p {
 #blog .blog-header h1 {
   margin-bottom: 50px;
 }
-#blog .all-blog {
+/* Carousel container */
+#blog .blog-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+/* Track for horizontal sliding */
+#blog .blog-track {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  transition: transform 0.5s ease;
 }
 #blog .blog-item {
+  min-width: 100%;
+  box-sizing: border-box;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 80%;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 10px;
+  flex-direction: row; 
+  background: white;
 }
 #blog .blog-info {
+  width: 50%;
   padding: 30px;
-  flex-basis: 50%;
-  height: 100%;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   color: white;
+  text-align: left;
 }
 #blog .blog-info h1 {
   font-size: 2rem;
@@ -389,39 +505,132 @@ p {
 #blog .blog-info p {
   color: white;
 }
-#blog .cta {
-  display: inline-block;
-  padding: 10px 20px;
-  color: white;
-  background-color: transparent;
+#blog .blog-info a {
+background-color: transparent;
   border: 2px solid crimson;
-  font-size: 1.5rem;
+  color: white;
+  font-size: 1.2rem;           /* smaller font */
+  padding: 6px 16px;           /* reduced padding */
+  width: fit-content;          /* shrink to fit text */
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+#blog .cta {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 2px solid crimson;
+  color: white;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  margin-top: 30px;
-  transition: 0.3s ease;
-  transition-property: background-color, color;
+  transition: 0.3s;
 }
 #blog .cta:hover {
   color: white;
   background-color: crimson;
 }
 #blog .blog-img {
-  flex-basis: 50%;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
+  width: 50%;
 }
-#blog .blog-img:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
+#blog .blog-img img {
   width: 100%;
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  opacity: 0.7;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
+
+/* Carousel navigation buttons */
+#blog .carousel-buttons {
+  top: 70%;
+  width: 100%;
+  display: flex;
+  transform: translateY(-50%);
+  justify-content: center;
+  align-items: center;
+  position: static; /* Not absolute anymore */
+  margin: 40px 0;
+  gap: 20px;
+}
+#blog .carousel-buttons button {
+  font-size: 3rem;
+  background:  rgba(0, 0, 0, 0.7);
+  color: crimson;
+  border: none;
+  cursor: pointer;
+  border-radius: 60%;
+  padding: 10px;
+}
+#blog .carousel-buttons button:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive tweaks for tablets and mobile */
+@media (max-width: 992px) {
+  #blog .blog-info h1 {
+    font-size: 2rem;
+  }
+  #blog .blog-info h2 {
+    font-size: 1.8rem;
+  }
+  #blog .blog-info p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #blog .blog-item {
+    flex-direction: column;
+    width: 100vw; /* Force full width */
+    max-width: 100vw;
+    overflow: hidden;
+  }
+
+  #blog .blog-img {
+    width: 100%;
+    height: auto;
+  }
+
+  #blog .blog-info {
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+    height: auto;
+  }
+
+  #blog .blog-info h1 {
+    font-size: 2rem;
+  }
+
+  #blog .blog-info h2 {
+    font-size: 1.8rem;
+  }
+
+  #blog .carousel-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static; /* Not absolute anymore */
+    margin: 10px 0;
+    gap: 10px;
+  }
+
+  #blog .carousel-buttons button {
+    font-size: 2rem;
+    padding: 6px 12px;
+  }
+
+  #blog .blog-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+  #blog .blog {
+    padding: 60px 10px; /* Add side padding */
+  }
+}
+
 /* End blog section */
 
 /*education*/
@@ -586,23 +795,21 @@ p {
   padding: 100px 20px;
 }
 #about .col-left {
-  width: 265px;
-  height: 250px;
+  width: 200px;
+  height: 260px;
 }
 #about .col-right {
   width: 100%;
 }
 #about .col-right h2 {
   font-size: 2.5rem;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0.2rem;
   margin-bottom: 10px;
 }
 #about .col-right p {
   margin-bottom: 20px;
-  font-size: 1.8rem;
   font-size: 1.5rem;
-  font-weight: 600;
 }
 #about .col-right .cta {
   color: black;
@@ -857,8 +1064,8 @@ textarea::placeholder {
     height: 200px;
   }
   #highlights .all-highlights .highlights-img {
-    height: 220px;
-    width: 220px;
+    height: 265px;
+    width: 250px;
   }
   /*end highlights section*/
 
